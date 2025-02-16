@@ -14,6 +14,7 @@ namespace Web_MVC_EFB4
 
             var connectString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(connectString));
+            builder.Services.AddAutoMapper(typeof(Program));
 
 
             var app = builder.Build();
